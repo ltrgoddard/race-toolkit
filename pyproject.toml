@@ -1,0 +1,21 @@
+[project]
+name = "race-toolkit"
+version = "0.1.0"
+description = "Toolkit to communicate with Airoha based device via the RACE protocol."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "bleak>=2.0.0",
+    "bumble==0.0.208",
+    "hexdump>=3.3",
+    "hid==1.0.7",
+    "tqdm>=4.67.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.8",
+]
+
+[tool.ruff.lint]
+extend-select = ["ANN001"]
