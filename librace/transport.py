@@ -164,7 +164,7 @@ class GATTBleakTransport(Transport):
                 chosen = int(input("Which one do you want to connect to?\n"))
             return devices[chosen]
 
-        logging.yellow("No target device found.")
+        logging.info("No target device found.")
         return None
 
 
