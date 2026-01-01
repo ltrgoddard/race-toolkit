@@ -56,8 +56,8 @@ def parse_args():
     parser.add_argument(
         "--le-names",
         default=None,
-        nargs="+",
-        help="List of names to scan for if no address is given",
+        action="append",
+        help="Name to scan for if no address is given (can be specified multiple times)",
     )
     parser.add_argument(
         "-c",

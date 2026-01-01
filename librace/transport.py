@@ -84,7 +84,10 @@ class GATTBleakTransport(Transport):
         self.client = BleakClient(self.address)
         await self.client.connect()
 
-        logging.info(f"Connected to {self.address.name} ({self.address.address})")
+        if isinstance(self.address, str):
+            logging.info(f"Connected to {self.address}")
+        else:
+            logging.info(f"Connected to {self.address.name} ({self.address.address})")
 
         service_uuids = [
             UUID(self.client.services.services[s].uuid)
